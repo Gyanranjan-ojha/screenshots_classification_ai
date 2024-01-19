@@ -1,0 +1,10 @@
+#____Common Packages_____
+python-dotenv==1.0.0
+#____Gunicorn Server_______
+gunicorn==20.1.0
+#____Required Django packages_____
+Django==4.1.9
+PyMySQL==1.0.3
+cffi==1.15.1
+cryptography==41.0.1
+Pillow==10.1.0
