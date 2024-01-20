@@ -1,8 +1,7 @@
-from django.contrib import admin
+# urls.py
 from django.urls import path
-from ss_cla_app import views
+from ss_cla_app.views import ChatbotView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index, name="homepage"),
+    path('api/chatbot/', ChatbotView.as_view(), name='chatbot'),
 ]
