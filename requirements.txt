@@ -8,3 +8,4 @@ PyMySQL==1.0.3
 cffi==1.15.1
 cryptography==41.0.1
 Pillow==10.1.0
+mysqlclient==2.2.1

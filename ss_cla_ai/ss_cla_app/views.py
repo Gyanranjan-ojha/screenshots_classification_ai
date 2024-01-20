@@ -6,7 +6,7 @@ def index(request):
     my_dict = {"insert_me": "I am from views.py"}
     return render(request,'index.html',context=my_dict)
 
-def get_gpt_test(request):
+def get_gpt_text(request):
     text = request.POST.get('text_field')
     print (text)
     return HttpResponse({json.dumps({'s':1,'m':"Successfully submitted !!"})})
