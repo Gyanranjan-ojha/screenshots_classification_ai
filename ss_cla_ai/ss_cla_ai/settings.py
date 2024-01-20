@@ -22,6 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Templates Directory
 
 TEMPLATE_DIR = os.path.join(BASE_DIR,"templates")
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -61,7 +65,8 @@ ROOT_URLCONF = 'ss_cla_ai.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        # 'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

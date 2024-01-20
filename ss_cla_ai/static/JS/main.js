@@ -39,11 +39,45 @@ function toggleChatPopup() {
     chatPopup.style.display = (chatPopup.style.display === "block") ? "none" : "block";
 }
 
+// function sendMessage() {
+//     var chatInput = document.getElementById("chatInput");
+//     var chatBody = document.getElementById("chatBody");
+//     console.log(chatInput.value);
+//     var userMessage = chatInput.value;
+//     var token = getCookieData("csrftoken");
+//     $.ajax({
+//         type: 'POST',
+//         url: "/getGPTPromt",
+//         headers: { "X-CSRFToken": token },
+//         data: {
+//             'text_field': userMessage
+//         },
+//         error: function (request, error) {
+//             let data1 = JSON.parse(error);
+//             console.log(error);
+//         },
+//         success: function (data) {
+//             arr = $.parseJSON(data);
+//             var botResponse = arr.m
+            
+//             chatInput.value = "";
+//             chatBody.innerHTML += "<p>User: " + userMessage + "</p>";
+//             chatBody.innerHTML += "<p class='chatbot-message'>Chatbot: " + botResponse + "</p>";
+//         }
+//     });
+// }
+
 function sendMessage() {
     var chatInput = document.getElementById("chatInput");
     var chatBody = document.getElementById("chatBody");
-    console.log(chatInput.value);
+    console.log(chatInput.value, "$$$$$$$$$$$");
+
     var userMessage = chatInput.value;
+    chatInput.value = "";
+
+    // Append user message to the right
+    chatBody.innerHTML += "<p class='user-message'>User: " + userMessage + "</p>";
+
     var token = getCookieData("csrftoken");
     $.ajax({
         type: 'POST',
@@ -54,18 +88,19 @@ function sendMessage() {
         },
         error: function (request, error) {
             let data1 = JSON.parse(error);
-            console.log(error);
+            console.log(error, "EEEEEEEEEEE");
         },
         success: function (data) {
             arr = $.parseJSON(data);
             var botResponse = arr.m
-            
-            chatInput.value = "";
-            chatBody.innerHTML += "<p>User: " + userMessage + "</p>";
-            chatBody.innerHTML += "<p>Chatbot: " + botResponse + "</p>";
+            // chatInput.value = "";
+            // chatBody.innerHTML += "<p>User: " + userMessage + "</p>";
+            chatBody.innerHTML += "<p class='chatbot-message'>Chatbot: " + botResponse + "</p>";
+            chatBody.scrollTop = chatBody.scrollHeight;
         }
     });
 }
+
 
 // Add event listener for Enter key on the chat input
 document.getElementById("chatInput").addEventListener("keydown", function (event) {
