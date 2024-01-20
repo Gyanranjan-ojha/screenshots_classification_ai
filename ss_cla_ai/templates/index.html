@@ -145,6 +145,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -208,18 +209,19 @@
     }
   </style>
 </head>
+
 <body>
 
   <button id="openChat" onclick="toggleChatPopup()">Open Chat</button>
-  
+
   <div id="chatPopup">
     <div id="chatHeader">Chatbot</div>
     <div id="chatBody"></div>
     <input type="text" id="chatInput" placeholder="Type your question">
     <button id="chatButton" onclick="sendMessage()">Send</button>
   </div>
-  
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="../static/JS/main.js"></script>
-  </body>
-</html>
+</body>
 
+</html>

@@ -39,14 +39,12 @@ function toggleChatPopup() {
     chatPopup.style.display = (chatPopup.style.display === "block") ? "none" : "block";
 }
 
-
 function sendMessage() {
     var chatInput = document.getElementById("chatInput");
     var chatBody = document.getElementById("chatBody");
     console.log(chatInput.value);
     var userMessage = chatInput.value;
     var token = getCookieData("csrftoken");
-    
     $.ajax({
         type: 'POST',
         url: "/getGPTPromt",
