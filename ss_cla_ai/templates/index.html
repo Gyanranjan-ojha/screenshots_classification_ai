@@ -1,0 +1,149 @@
+<!-- <!DOCTYPE html><head>
+    <title>My Awesome Site</title>
+    <link rel="stylesheet" href="index.css">
+</head><body>
+    <h1> Hello, This is from Index.html</h1>
+    <h3>{{ insert_me }}</h3>
+</body></html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .main-container {
+      /* display: flex; */
+      height: 100vh; /* 100% of the viewport height */
+      width: 100%;
+      background: #d3d3d3;
+    }
+
+    .second-column {
+       /* Takes up twice the space of the first column */
+      /* background-color: #d3d3d3; */
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      height: 80%;
+      width: 50%;
+      margin-left: 25%;
+    }
+
+    .image-container {
+      flex: 1; /* Takes up half of the second column */
+      background-color: #c0c0c0; /* Lightest gray color */
+      padding: 20px;
+      box-sizing: border-box;
+      margin-top: 10%;
+      height: 450px;
+      border-radius: 5px;
+      font-weight: 700;
+    }
+
+    .form-container {
+      /* flex: 1;  */
+      background-color: #a9a9a9; /* Dark gray color */
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .img-div{
+      margin-top: 3%;
+      height: 65%;
+      /* width: 30%; */
+      border-radius: 5px;
+      background-color: #d3d3d3;
+      border: 2px dotted #000;
+      text-align: center;
+    }
+    .img-div img {
+      max-width: 100px; /* Make sure the image doesn't exceed its container */
+      height: 50px; /* Maintain aspect ratio */
+      display: block; /* Remove default inline behavior */
+      margin-top: 3%;
+      margin-left: 45%;
+    }
+    /* .img-div{
+      text-align: center;
+    } */
+    .input{
+      padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: none;
+    margin-left: 95px;
+    }
+    .input2{
+      padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: none;
+    margin-left: 80px;
+    }
+    .input3{
+      padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: none;
+    margin-left: 45px;
+    width: 33%;
+    }
+    .button {
+    /* Add any button styles you need */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    }
+    /* .button:hover{
+        background-color: rgb(83, 81, 81);
+        color: whitesmoke;
+        transition: 0.1s;
+    } */
+
+    @media (max-width: 768px) {
+      .main-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="second-column">
+      <div class="image-container">
+        <label>Game ID: </label>
+        <input placeholder="Enter game id" class="input"><br><br>
+        <label>Release ID: </label>
+        <input placeholder="Enter Release id" class="input2"><br><br>
+        <label>Select Platform: </label>
+        <select placeholder="select" class="input3">
+          <option>hello</option>
+          <option>world</option>
+          <option>This</option>
+          <option>is</option>
+          <option>shirisha</option>
+        </select>
+        <div class="img-div">
+          <img src="static/icons/cloud-backup-icon.svg" alt="Your Image">
+          <h3>Drag and drop files here</h3>
+          <p>Files supported: JPG</p>
+          <b>or</b><br><br>
+          <button type="button">
+            <input type="file" id="fileInputControl" webkitdirectory = 'true' class="button"/>
+          </button>
+          <!-- <button class="button">Browse Here</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
